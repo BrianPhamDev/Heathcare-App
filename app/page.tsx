@@ -1,5 +1,4 @@
 import PatientForm from "@/components/forms/PatientForm";
-import { API_KEY, ENDPOINT, PROJECT_ID } from "@/lib/appwrite.config";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -18,11 +17,7 @@ export default function Home() {
 
           <PatientForm></PatientForm>
 
-          <div className="flex flex-col">
-            <h3>Public variable: {ENDPOINT!}</h3>
-            <h3>Public variable: {PROJECT_ID}</h3>
-            <h3>Public variable: {API_KEY!}</h3>
-          </div>
+          <div className="flex flex-col"></div>
 
           <div className="text-14-regular mt-20 flex justify-between">
             <p className="justify-items-end text-dark-600 xl:text-left">
