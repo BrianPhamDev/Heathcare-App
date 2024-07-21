@@ -59,7 +59,7 @@ const RegisterForm = ({ user }: { user: User }) => {
       const patientData = {
         ...values,
         userId: user.$id,
-        birthDate: new Date(values.birthDate), // JavaScript Date object provide method like getFullYear(), getMonth(), etc., which are useful for data manipulation,
+        birthDate: new Date(values.birthDate),
         identificationDocument: formData,
       };
 
@@ -67,7 +67,7 @@ const RegisterForm = ({ user }: { user: User }) => {
       const patient = await registerPatient(patientData);
 
       if (patient) {
-        router.push(`/patients/${patient.$id}/new-appointment`);
+        router.push(`/patients/${user.$id}/new-appointment`);
       }
     } catch (error) {
       console.log(error);

@@ -348,6 +348,50 @@ html {
   align-items: center !important;
 }
 
+.react-datepicker__header__dropdown,
+.react-datepicker__header__dropdown--scroll {
+  @apply py-2;
+}
+
+.react-datepicker__year-option {
+  @apply bg-[#1A1D21] text-white;
+}
+
+.react-datepicker__month-option {
+  @apply bg-[#1A1D21] text-white hover:text-[#1A1D21];
+}
+.react-datepicker__navigation.react-datepicker__navigation--years.react-datepicker__navigation--years-upcoming {
+  @apply relative;
+}
+
+.react-datepicker__year-option
+  > .react-datepicker__navigation.react-datepicker__navigation--years.react-datepicker__navigation--years-upcoming::before {
+  content: "";
+  position: absolute;
+  top: calc(50% + 4px);
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  transform: translate(-50%, -50%);
+  background-image: url("/assets/icons/arrow-up.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.react-datepicker__year-option
+  > .react-datepicker__navigation.react-datepicker__navigation--years.react-datepicker__navigation--years-previous::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 4px);
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  transform: translate(-50%, -50%);
+  background-image: url("/assets/icons/arrow-down.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 /* =====  REACT PHONE NUMBER INPUT OVERRIDES */
 .PhoneInputInput {
   outline: none;
