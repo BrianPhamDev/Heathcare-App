@@ -45,6 +45,7 @@ const AppointmentForm = ({
       cancellationReason: appointment?.cancellationReason || "",
     },
   });
+
   const onSubmit = async (
     values: z.infer<typeof AppointmentFormValidation>
   ) => {
